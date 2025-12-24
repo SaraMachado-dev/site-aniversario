@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  background: linear-gradient(180deg, #ffe4ec, #ffccd5);
+  color: #5a0f2e;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  color: #b1123f;
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* CARTA */
+h2 {
+  text-align: center;
+  color: #b1123f;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.final-text {
+  text-align: center;
+}
+
+/* BOTÃO */
+.button-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff4d6d, #c9184a);
+  border: none;
+  padding: 15px 35px;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* GALERIA */
+.photos {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FOTOS — polaroide */
+.photos img {
+  width: 130px;
+  background: #fff;
+  padding: 10px 10px 20px 10px;
+  border-radius: 8px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.photos img:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photos img:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* VÍDEOS — CENTRALIZADOS NA MESMA LINHA */
+.video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* força o título a ocupar a linha inteira */
+.video h2 {
+  width: 100%;
+}
+
+/* vídeos estilo polaroide */
+.video video {
+  width: 210px;
+  background: #fff;
+  padding: 10px 10px 20px 10px;
+  border-radius: 10px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+/* inclinação scrapbook */
+.video video:nth-of-type(1) {
+  transform: rotate(-3deg);
+}
+
+.video video:nth-of-type(2) {
+  transform: rotate(2deg);
+}
+
+.video video:nth-of-type(3) {
+  transform: rotate(-1deg);
+}
+
+.video video:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* CONTAGEM */
+.countdown {
+  text-align: center;
+}
+
+#timer {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* GIRASSÓIS */
+.sunflower {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .photos img {
+    width: 110px;
+  }
+
+  .video video {
+    width: 180px;
+  }
+}
